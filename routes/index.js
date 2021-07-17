@@ -16,7 +16,21 @@ const messages = [
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express", messages: messages });
+  res.render("index", { title: "Message Board", messages: messages });
+});
+
+router.get("/new", (req, res, next) => {
+  res.render("form");
+});
+// nodemon refresh
+router.post("/new", (req, res, next) => {
+  let new_obj = {
+    text: req.body.body,
+    user: req.body.name,
+    added: new Date(),
+  };
+  messages.push(new_obj);
+  res.redirect("/");
 });
 
 module.exports = router;

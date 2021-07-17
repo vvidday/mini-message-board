@@ -6,13 +6,14 @@
     <title>{{title}}</title>
   </head>
   <body>
+    <a href="/new">Add a new message</a>
     <h1>Message Board</h1>
     <div id="message-container">
       {{#each messages}}
         <div class="message">
-          <div id="message-text">{{this.text}}</div>
-          <div id="message-user">{{this.user}}</div>
-          <div id="message-date">{{this.added}}</div>
+          <div class="message-text">{{this.text}}</div>
+          <div class="message-user">{{this.user}}</div>
+          <div class="message-date">{{this.added}}</div>
         </div>
       {{/each}}
     </div>

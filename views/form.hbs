@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Form</title>
+  </head>
+  <body>
+    <h1>Submit New Message</h1>
+    <form method="POST" action="/new">
+      <div class="input-div">
+        <label for="form-name">Name</label>
+        <input type="text" name="name" id="form-name" required maxLength="20" />
+      </div>
+      <div class="input-div">
+        <label for="form-body">Message</label>
+        <textarea
+          rows="5"
+          columns="50"
+          type="text"
+          name="body"
+          id="form-body"
+          required
+        ></textarea>
+      </div>
+      <input id="form-submit" type="submit" value="Submit" />
+    </form>
+    <a href="/">Back To Home</a>
+  </body>
+</html>
