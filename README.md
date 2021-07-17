@@ -1,4 +1,4 @@
-#mini-message-board
+# mini-message-board
 
 Mini message board project from The Odin Project (NodeJS)
 
